@@ -27,12 +27,14 @@ public class QueryStudentDemo {
             // display student
             displayStudent(theStudents);
             // query students
+            System.out.println("query students: lastName='hana'");
             theStudents = session.createQuery("from Student s where s.lastName = 'hana'").getResultList();
 
             // display student who have last name of Hana
             displayStudent(theStudents);
 
-            // query students: lastName='Hana' OR firstName='Hana'
+            // query students: lastName='hana' OR firstName='adam'
+            System.out.println("query students: lastName='hana' AND firstName='adam'");
             theStudents = session.createQuery("from Student s where s.lastName = 'hana' and s.firstName='adam'").getResultList();
             displayStudent(theStudents);
 
