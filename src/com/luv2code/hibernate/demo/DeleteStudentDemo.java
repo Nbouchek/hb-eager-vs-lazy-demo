@@ -26,9 +26,11 @@ public class DeleteStudentDemo {
             Student myStudent = session.get(Student.class, studentId);
 
             // delete the student
-            System.out.println("Deleting student: " + myStudent);
-            session.delete(myStudent);
+//            System.out.println("Deleting student: " + myStudent);
+//            session.delete(myStudent);
 
+            System.out.println("Delting student id=2");
+            session.createQuery("delete  from Student where id=11").executeUpdate();
             session.getTransaction().commit();
             System.out.println("Done :)");
         } finally {
