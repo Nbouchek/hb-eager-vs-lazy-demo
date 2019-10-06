@@ -25,21 +25,23 @@ public class QueryStudentDemo {
             List<Student > theStudents = session.createQuery("from Student").getResultList();
 
             // display student
-            for (Student tempStudent: theStudents) {
-                System.out.println(tempStudent);
-            }
+            DisplayStudent(theStudents);
             // query students
             theStudents = session.createQuery("from Student s where s.lastName = 'hana'").getResultList();
             // display student
-            for (Student tempStudent: theStudents) {
-                System.out.println(tempStudent);
-            }
+            DisplayStudent(theStudents);
 
             // commit transaction
             session.getTransaction().commit();
             System.out.println("Done :)");
         } finally {
             session.close();
+        }
+    }
+
+    private static void DisplayStudent(List<Student> theStudents) {
+        for (Student tempStudent : theStudents) {
+            System.out.println(tempStudent);
         }
     }
 }
