@@ -20,8 +20,14 @@ public class CreateDemo {
         Session session = factory.getCurrentSession();
         try {
             // create the objects
-            Instructor tempInstructor = new Instructor("Nacer", "Bouchekhima", "nacer@luv2code.com");
-            InstructorDetail tempInstructorDetail = new InstructorDetail("http://www.ssanabel.com/youtube", "lv 2 code");
+//            Instructor tempInstructor = new Instructor("Nacer", "Bouchekhima", "nacer@luv2code.com");
+//            InstructorDetail tempInstructorDetail = new InstructorDetail("http://www.ssanabel.com/youtube", "lv 2 code");            Instructor tempInstructor = new Instructor("Nacer", "Bouchekhima", "nacer@luv2code.com");
+//            Instructor tempInstructor = new Instructor("Adam", "Bouchekhima", "adam@luv2code.com");
+//            InstructorDetail tempInstructorDetail = new InstructorDetail("http://www.sane.com/youtube", "lv science");
+//            Instructor tempInstructor = new Instructor("Hana", "Bouchekhima", "hana@luv2code.com");
+//            InstructorDetail tempInstructorDetail = new InstructorDetail("http://www.nuna.com/youtube", "lv maths");
+            Instructor tempInstructor = new Instructor("Test", "Delete", "delete@luv2code.com");
+            InstructorDetail tempInstructorDetail = new InstructorDetail("http://www.delete.com/youtube", "lv maths");
 
             // associate the objects
             tempInstructor.setInstructorDetail(tempInstructorDetail);
