@@ -38,7 +38,7 @@ public class EagerLazyDemo {
 
             // close the session
             session.close();
-
+            System.out.println("The session is now closed");
             // option 1: call getter while session is open
             // get get course for instructor
             System.out.println("luv2code: Courses: " + tempInstructor.getCourses());
